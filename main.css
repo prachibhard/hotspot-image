@@ -1,0 +1,315 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* Start your base/mobile styles here */
+
+html, body {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Droid Serif', serif;
+    background: #DC524A;
+    color: white;
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+}
+
+.main-text, h1, uL {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.3em;
+    line-height: 1.5;
+}
+
+uL {
+    font-size: .9em;
+    margin: 10%;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: black;
+}
+
+h2 {
+    margin: 10px;
+    padding: 10px;
+    font-size: .9em;
+}
+
+.sub-text {
+    margin: 10px;
+    padding: 10px;
+    font-size: .8em;
+    color: black;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.caption {
+    color: black;
+    font-size: .8em;
+    margin-left: 10px;
+    line-height: 1.3em;
+}
+
+.credit {
+    font-weight: 400;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    background-color: white;
+    border: solid red;
+    opacity: .75;
+    z-index: 3;
+    display: block;
+}
+
+.circlesmall {
+    width: 5px;
+    height: 5px;
+    border-radius: 100px;
+    background-color: white;
+    border: solid red;
+    opacity: .75;
+    z-index: 3;
+    display: block;
+}
+
+
+/*allcars1 picture start*/
+
+#circle_honda {
+    position: absolute;
+    top: 45%;
+    left: 12%;
+}
+
+#circle_chevrolet {
+    position: absolute;
+    top: 47%;
+    left: 19%;
+}
+
+#circle_jeep {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+}
+
+#circle_audi {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+}
+
+
+/*onecar1 picture start*/
+
+#circle_bumper {
+    position: absolute;
+    top: 60%;
+    left: 3%;
+}
+
+#circle_seatbelt {
+    position: absolute;
+    top: 45%;
+    left: 47%;
+}
+
+#circle_body {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+}
+
+#circle_gearbox {
+    position: absolute;
+    top: 43%;
+    left: 60%;
+}
+
+#circle_radiator {
+    position: absolute;
+    top: 50%;
+    left: 78%;
+}
+
+#circle_muffler {
+    position: absolute;
+    top: 67%;
+    left: 10%;
+}
+
+h1 {
+    padding-bottom: 10px;
+    font-size: 2em;
+}
+
+.photo-container {
+    width: 100%;
+    position: relative;
+    /*z-index: 1;*/
+}
+
+.info_slides {
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.info_slides.active {
+    z-index: 4;
+    opacity: 1;
+}
+
+.info_popIn {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 70px 15px 30px 15px;
+    font-size: 1.5em;
+    text-align: center;
+    color: brown;
+    height: 100%;
+}
+
+.btn_close {
+    position: absolute;
+    font-family: sans-serif;
+    top: 5%;
+    left: 92%;
+    font-size: 2em;
+    color: white;
+    z-index: 4;
+    font-weight: 900;
+}
+
+img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* Tablet/Desktop overrides */
+
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here. Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+}
+
+html, body {
+    display: block;
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+}
+
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
+    html, body {
+        display: block;
+        margin: 10%;
+        /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    }
+    .circle:hover {
+        background-color: blue;
+    }
+    .circlesmall {
+        width: 30px;
+        height: 30px;
+    }
+    .circlesmall:hover {
+        background-color: blue;
+    }
+    #popIn {
+        font-size: 5em;
+        padding: 200px 15px 30px 15px;
+    }
+    .btn_close {
+        font-size: 4em;
+    }
+    .btn_close:hover {
+        color: blue;
+    }
+    #circle_bumper {
+        position: absolute;
+        top: 64%;
+        left: 5%;
+    }
+    #circle_seatbelt {
+        position: absolute;
+        top: 47%;
+        left: 49%;
+    }
+    #circle_body {
+        position: absolute;
+        top: 54%;
+        left: 30%;
+    }
+    #circle_gearbox {
+        position: absolute;
+        top: 46%;
+        left: 60%;
+    }
+    #circle_muffler {
+        position: absolute;
+        top: 70%;
+        left: 10%;
+    }
+}
