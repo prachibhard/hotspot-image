@@ -70,6 +70,7 @@ html, body {
 uL {
     font-size: .9em;
     margin: 10%;
+    margin-top: 0px;
 }
 
 a:link {
@@ -84,6 +85,10 @@ h2 {
     margin: 10px;
     padding: 10px;
     font-size: .9em;
+}
+
+h3 {
+    padding: 10px;
 }
 
 .sub-text {
@@ -238,7 +243,7 @@ h1 {
     top: 5%;
     left: 92%;
     font-size: 2em;
-    color: white;
+    color: #0000ba;
     z-index: 4;
     font-weight: 900;
 }
@@ -265,27 +270,29 @@ html, body {
     html, body {
         display: block;
         margin: 10%;
+        margin-top: 30px;
+        margin-bottom: 30px;
         /* Sets default font-size to 16px, ensuring 1em = 16px; */
     }
     .circle:hover {
-        background-color: blue;
+        background-color: #0000ba;
     }
     .circlesmall {
         width: 30px;
         height: 30px;
     }
     .circlesmall:hover {
-        background-color: blue;
+        background-color: #0000ba;
     }
     #popIn {
         font-size: 5em;
         padding: 200px 15px 30px 15px;
     }
     .btn_close {
-        font-size: 4em;
+        font-size: 1.5em;
     }
     .btn_close:hover {
-        color: blue;
+        color: #d43a36;
     }
     #circle_bumper {
         position: absolute;
